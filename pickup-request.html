@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Pickup - eWasteNet</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pickup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1><i class="fas fa-recycle"></i> eWasteNet</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="pickup-request.html" class="active"><i class="fas fa-truck"></i> Request Pickup</a></li>
+          <li><a href="tracking.html"><i class="fas fa-map-marker-alt"></i> Track</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          <li><a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Pickup Request Section -->
+  <section class="pickup-section">
+    <div class="container">
+      <div class="pickup-header">
+        <h2><i class="fas fa-truck"></i> Schedule Your E-Waste Pickup</h2>
+        <p>Book a convenient pickup time and we'll handle the rest. Our certified team ensures safe and responsible disposal.</p>
+      </div>
+
+      <div class="pickup-content">
+        <div class="pickup-form-container">
+          <form id="pickup-form" class="pickup-form">
+            <div class="form-section">
+              <h3><i class="fas fa-user"></i> Personal Information</h3>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="full-name">Full Name *</label>
+                  <input type="text" id="full-name" name="fullName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3><i class="fas fa-map-marker-alt"></i> Pickup Address</h3>
+              
+              <div class="form-group">
+                <label for="address">Street Address *</label>
+                <input type="text" id="address" name="address" required placeholder="Enter your street address">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">City *</label>
+                  <input type="text" id="city" name="city" required placeholder="Enter your city">
+                </div>
+                <div class="form-group">
+                  <label for="state">State *</label>
+                  <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="zipcode">ZIP Code *</label>
+                <input type="text" id="zipcode" name="zipcode" required placeholder="Enter ZIP code">
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3><i class="fas fa-calendar-alt"></i> Pickup Schedule</h3>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="pickup-date">Preferred Date *</label>
+                  <input type="date" id="pickup-date" name="pickupDate" required min="">
+                </div>
+                <div class="form-group">
+                  <label for="pickup-time">Preferred Time *</label>
+                  <select id="pickup-time" name="pickupTime" required>
+                    <option value="">Select Time</option>
+                    <option value="09:00-11:00">9:00 AM - 11:00 AM</option>
+                    <option value="11:00-13:00">11:00 AM - 1:00 PM</option>
+                    <option value="13:00-15:00">1:00 PM - 3:00 PM</option>
+                    <option value="15:00-17:00">3:00 PM - 5:00 PM</option>
+                    <option value="17:00-19:00">5:00 PM - 7:00 PM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3><i class="fas fa-laptop"></i> E-Waste Items</h3>
+              
+              <div class="waste-categories">
+                <div class="category-group">
+                  <h4>Computers & Laptops</h4>
+                  <div class="checkbox-group">
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="desktop-computer">
+                      <span class="checkmark"></span>
+                      Desktop Computer
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="laptop">
+                      <span class="checkmark"></span>
+                      Laptop
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="monitor">
+                      <span class="checkmark"></span>
+                      Monitor
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="keyboard-mouse">
+                      <span class="checkmark"></span>
+                      Keyboard & Mouse
+                    </label>
+                  </div>
+                </div>
+
+                <div class="category-group">
+                  <h4>Mobile Devices</h4>
+                  <div class="checkbox-group">
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="smartphone">
+                      <span class="checkmark"></span>
+                      Smartphone
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="tablet">
+                      <span class="checkmark"></span>
+                      Tablet
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="mobile-phone">
+                      <span class="checkmark"></span>
+                      Mobile Phone
+                    </label>
+                  </div>
+                </div>
+
+                <div class="category-group">
+                  <h4>Home Electronics</h4>
+                  <div class="checkbox-group">
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="tv">
+                      <span class="checkmark"></span>
+                      Television
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="printer">
+                      <span class="checkmark"></span>
+                      Printer
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="scanner">
+                      <span class="checkmark"></span>
+                      Scanner
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="gaming-console">
+                      <span class="checkmark"></span>
+                      Gaming Console
+                    </label>
+                  </div>
+                </div>
+
+                <div class="category-group">
+                  <h4>Other Electronics</h4>
+                  <div class="checkbox-group">
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="camera">
+                      <span class="checkmark"></span>
+                      Camera
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="speakers">
+                      <span class="checkmark"></span>
+                      Speakers
+                    </label>
+                    <label class="checkbox-item">
+                      <input type="checkbox" name="items[]" value="other">
+                      <span class="checkmark"></span>
+                      Other Electronics
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="special-instructions">Special Instructions</label>
+                <textarea id="special-instructions" name="specialInstructions" rows="3" placeholder="Any special instructions for pickup (optional)"></textarea>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3><i class="fas fa-shield-alt"></i> Data Security</h3>
+              <div class="security-options">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="dataWipe" value="yes">
+                  <span class="checkmark"></span>
+                  I require data wiping service (additional $10 fee)
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="certificate" value="yes">
+                  <span class="checkmark"></span>
+                  I need a disposal certificate (additional $5 fee)
+                </label>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> Submit Pickup Request
+              </button>
+              <button type="button" class="reset-btn" onclick="resetForm()">
+                <i class="fas fa-undo"></i> Reset Form
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="pickup-info">
+          <div class="info-card">
+            <h3><i class="fas fa-info-circle"></i> What to Expect</h3>
+            <ul>
+              <li><i class="fas fa-check"></i> Free pickup service for most items</li>
+              <li><i class="fas fa-check"></i> Professional and certified team</li>
+              <li><i class="fas fa-check"></i> Real-time tracking updates</li>
+              <li><i class="fas fa-check"></i> Environmentally responsible disposal</li>
+              <li><i class="fas fa-check"></i> Data security guaranteed</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3><i class="fas fa-clock"></i> Pickup Hours</h3>
+            <div class="hours">
+              <p><strong>Monday - Friday:</strong> 9:00 AM - 7:00 PM</p>
+              <p><strong>Saturday:</strong> 10:00 AM - 5:00 PM</p>
+              <p><strong>Sunday:</strong> Closed</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3><i class="fas fa-phone"></i> Need Help?</h3>
+            <p>Contact our support team:</p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> pickup@ewastenet.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>eWasteNet</h4>
+          <p>Leading the way in responsible e-waste management and environmental conservation.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="pickup-request.html">Request Pickup</a></li>
+            <li><a href="tracking.html">Track Waste</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-envelope"></i> info@ewastenet.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Green Street, Eco City</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 eWasteNet. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="pickup.js"></script>
+</body>
+</html> 
